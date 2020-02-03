@@ -15,7 +15,7 @@ def main():
 		sys.exit(1)
 	environnement = "IRC_" + sys.argv[1]
 	bot_name = sys.argv[2]
-	file_number = int(sys.argv[3])
+	file_number = sys.argv[3]
 
 	config = configparser.ConfigParser()
 	config.read(CONFIG_FILE)
