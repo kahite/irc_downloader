@@ -1,0 +1,16 @@
+[IRC_XXX]
+server=xxx
+port=xx
+nickname=xxx
+debug=True
+
+[IRC_yyy]
+server=yyy
+port=yyy
+nickname=yyy
+master_bot=yyy
+private_channel=yyy
+secret=yyy
+debug=True
+
+
