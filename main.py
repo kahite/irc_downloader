@@ -4,7 +4,7 @@ import sys
 
 
 from client import IRCClient
-
+from clientdirect import IRCDirectClient
 
 CONFIG_FILE = "config.ini"
 
@@ -28,8 +28,11 @@ def main():
 	port = irc_config["port"]
 	nickname = irc_config["nickname"]
 
+	if "master_bot" in config:
+		client = IRCClient(irc_config, bot_name, file_number)
+	else:
+		client = IRCDirectClient(irc_config, bot_name, file_number)
 
-	client = IRCClient(irc_config, bot_name, file_number)
 	try:
 		client.connect(server, int(port), nickname)
 	except irc.client.ServerConnectionError as error:
